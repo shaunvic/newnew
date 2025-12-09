@@ -1,14 +1,12 @@
 /*
 ============================
-   VARIABLES & GLOBAL RESET
+    VARIABLES & GLOBAL RESET
 ============================
 */
 :root {
     --color-primary: #00a896;   /* Teal */
-    --color-secondary: #054a59; /*
-Charcoal/Navy */
-    --color-highlight: #ffb300; /* Gold/Yellow
-*/
+    --color-secondary: #054a59; /* Charcoal/Navy */
+    --color-highlight: #ffb300; /* Gold/Yellow */
     --color-text: #333;
     --color-light-bg: #f5fcfc;  /* Very light teal */
     --color-dark-bg: #054a59;   /* Secondary/Navy */
@@ -24,7 +22,7 @@ Charcoal/Navy */
 
 /*
 ============================
-   BASE STYLES
+    BASE STYLES
 ============================
 */
 body {
@@ -40,7 +38,7 @@ section {
 
 /*
 ============================
-   HEADER & NAV
+    HEADER & NAV
 ============================
 */
 .header {
@@ -50,6 +48,9 @@ section {
     padding: 15px 30px;
     background: #fff;
     border-bottom: 1px solid #ddd;
+    /* Added position relative for mobile menu absolute positioning */
+    position: relative;
+    z-index: 100; /* Ensure header is on top */
 }
 
 .logo {
@@ -66,6 +67,7 @@ section {
 .nav {
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .nav a {
@@ -83,7 +85,36 @@ a:hover {
 
 /*
 ============================
-   BUTTONS
+    HAMBURGER MENU STYLES (NEW)
+============================
+*/
+
+/* Hide the hamburger button and desktop CTA by default */
+.hamburger {
+    display: none;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200; /* Ensure it's on top of the menu */
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+.desktop-btn {
+    /* Class added to HTML to target the CTA button */
+}
+
+/*
+============================
+    BUTTONS
 ============================
 */
 .btn-primary,
@@ -123,7 +154,7 @@ a:hover {
 
 /*
 ============================
-   HERO
+    HERO
 ============================
 */
 .hero {
@@ -156,7 +187,7 @@ a:hover {
 
 /*
 ============================
-   VALUE PROPOSITION (Why It Works)
+    VALUE PROPOSITION (Why It Works)
 ============================
 */
 .value-prop
@@ -239,7 +270,7 @@ h2 {
 }
 /*
 ============================
-   SERVICES
+    SERVICES
 ============================
 */
 .services-section
@@ -296,7 +327,7 @@ p {
 
 /*
 ============================
-   HOW IT WORKS
+    HOW IT WORKS
 ============================
 */
 .how-it-works
@@ -335,7 +366,7 @@ h2 {
 
 /*
 ============================
-   SOCIAL PROOF (Keeping styles for completeness)
+    SOCIAL PROOF (Keeping styles for completeness)
 ============================
 */
 .social-proof
@@ -376,7 +407,7 @@ strong {
 
 /*
 ============================
-   SPLIT CTA
+    SPLIT CTA
 ============================
 */
 .split-section
@@ -404,7 +435,7 @@ strong {
 
 /*
 ============================
-   FORMS
+    FORMS
 ============================
 */
 .form-section
@@ -480,7 +511,7 @@ button {
 
 /*
 ============================
-   FINAL CTA
+    FINAL CTA
 ============================
 */
 .final-cta
@@ -499,7 +530,7 @@ h2 {
 
 /*
 ============================
-   FOOTER
+    FOOTER
 ============================
 */
 .footer {
@@ -517,7 +548,7 @@ h2 {
 
 /*
 ============================
-   RESPONSIVE
+    RESPONSIVE
 ============================
 */
 @media
@@ -530,573 +561,62 @@ h2 {
 @media
 (max-width: 768px) {
     .header {
-        flex-direction: column;
-        gap: 10px;
+        /* Revert to single-line layout for better mobile header structure */
+        flex-direction: row; 
+        padding: 15px 20px; /* Reduced padding */
     }
+
+    /* Mobile Menu: Hide nav by default and show hamburger/mobile CTA */
     .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 10px 0;
-    }
-    
-    /* Ensure mobile font size is smaller and wraps */
-    .hero h1 {
-        font-size: 2rem;
-        white-space: normal; 
-        overflow: visible;
-    }
-    
-    .value-grid,
-    .steps,
-    .stats,
-    .split-section {
-        flex-direction: column;
-    }
-    .value-item,
-    .step,
-    .split,
-    .service-card {
+        /* Hide menu off-screen */
+        display: none;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
         width: 100%;
-    }
-}/*
-============================
-   VARIABLES & GLOBAL RESET
-============================
-*/
-:root {
-    --color-primary: #00a896;   /* Teal */
-    --color-secondary: #054a59; /*
-Charcoal/Navy */
-    --color-highlight: #ffb300; /* Gold/Yellow
-*/
-    --color-text: #333;
-    --color-light-bg: #f5fcfc;  /* Very light teal */
-    --color-dark-bg: #054a59;   /* Secondary/Navy */
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/*
-============================
-   BASE STYLES
-============================
-*/
-body {
-    font-family: Arial, sans-serif;
-    color: var(--color-text);
-    line-height: 1.6;
-    background: #fff;
-}
-
-section {
-    padding: 60px 20px;
-}
-
-/*
-============================
-   HEADER & NAV
-============================
-*/
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.header-logo
-{
-    height: 40px;
-    width: auto;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: var(--color-text);
-    transition: color 0.3s;
-    font-size: 0.95rem;
-}
-
-.nav
-a:hover {
-    color: var(--color-primary);
-}
-
-/*
-============================
-   BUTTONS
-============================
-*/
-.btn-primary,
-.btn-secondary
-{
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    text-align: center; 
-}
-
-.btn-primary
-{
-    background: var(--color-highlight);
-    color: var(--color-secondary);
-}
-
-.btn-primary:hover
-{
-    background: #e6a200;
-}
-
-.btn-secondary
-{
-    background: var(--color-primary);
-    color: #fff;
-}
-
-.btn-secondary:hover
-{
-    background: #008f80;
-}
-
-/*
-============================
-   HERO
-============================
-*/
-.hero {
-    text-align: center;
-    background: var(--color-light-bg);
-    padding: 80px 20px;
-}
-
-.hero-content
-{
-    /* AMENDMENT: Increased max width to give the heading more room */
-    max-width: 900px; 
-    margin: 0 auto;
-}
-
-.hero h1 {
-    color: var(--color-secondary);
-    margin-bottom: 15px;
-    
-    /* AMENDMENT: Adjusted font size and allowed wrapping for desktop */
-    font-size: 3.2rem; 
-    white-space: normal; 
-    overflow: visible; 
-}
-
-.hero p {
-    margin: 5px 0;
-    font-size: 1.1rem;
-}
-
-/*
-============================
-   VALUE PROPOSITION (Why It Works)
-============================
-*/
-.value-prop
-{
-    text-align: center;
-}
-
-.value-prop
-h2 {
-    color: var(--color-secondary);
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-
-.value-grid
-{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.value-item
-{
-    width: 30%;
-    min-width: 260px;
-    padding: 20px;
-    border: 1px solid var(--color-primary);
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    /* AMENDMENT: Added height to prevent layout shift on hover */
-    min-height: 150px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer; /* Indicates interactivity */
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-/* AMENDMENT: Styling for the content that is visible by default */
-.value-item .visible-content {
-    color: var(--color-primary);
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-/* AMENDMENT: Styling for the content that is hidden by default */
-.value-item .hidden-content {
-    display: none; /* Hide the detailed content initially */
-    text-align: center;
-    padding: 0 10px; /* Add some horizontal padding for aesthetics */
-}
-
-.value-item .hidden-content h4 {
-    color: var(--color-secondary);
-    margin-bottom: 5px;
-    font-size: 1.25rem;
-}
-
-.value-item .hidden-content p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-/* AMENDMENT: Hover states */
-.value-item:hover {
-    background: var(--color-light-bg);
-    border-color: var(--color-secondary);
-}
-
-.value-item:hover .visible-content {
-    display: none; /* Hide the simple heading on hover */
-}
-
-.value-item:hover .hidden-content {
-    display: block; /* Show the detailed content on hover */
-}
-/*
-============================
-   SERVICES
-============================
-*/
-.services-section
-{
-    text-align: center;
-    background: #fff;
-}
-
-.services-section
-h2 {
-    color: var(--color-secondary);
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-
-.services-container
-{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.service-card
-{
-    width: 30%;
-    min-width: 280px;
-    padding: 30px;
-    background: var(--color-light-bg);
-    border-radius: 8px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    text-align: left;
-    transition: transform 0.3s;
-}
-
-.service-card:hover
-{
-    transform: translateY(-5px);
-}
-
-.service-card
-h3 {
-    color: var(--color-primary);
-    border-bottom: 2px solid
-var(--color-highlight);
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-.service-card
-p {
-    margin-bottom: 15px;
-}
-
-/*
-============================
-   HOW IT WORKS
-============================
-*/
-.how-it-works
-{
-    text-align: center;
-    background: #f1f1f1;
-}
-
-.how-it-works
-h2 {
-    color: var(--color-secondary);
-    margin-bottom: 40px;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.step {
-    width: 30%;
-    min-width: 260px;
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.step h3 {
-    color: var(--color-secondary);
-    margin-bottom: 10px;
-}
-
-/*
-============================
-   SOCIAL PROOF (Keeping styles for completeness)
-============================
-*/
-.social-proof
-{
-    text-align: center;
-    background: var(--color-light-bg);
-}
-
-.social-proof
-blockquote {
-    font-style: italic;
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    padding-left: 20px;
-    border-left: 5px solid
-var(--color-primary);
-}
-
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.stats div
-{
-    color: var(--color-secondary);
-}
-
-.stats
-strong {
-    display: block;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-}
-
-/*
-============================
-   SPLIT CTA
-============================
-*/
-.split-section
-{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    background: #fff;
-}
-
-.split {
-    width: 45%;
-    min-width: 280px;
-    text-align: center;
-    padding: 30px;
-    background: var(--color-light-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.split h3 {
-    color: var(--color-secondary);
-}
-
-/*
-============================
-   FORMS
-============================
-*/
-.form-section
-{
-    background: #f1f1f1;
-    padding: 80px 20px;
-}
-
-.jobseeker-form-section
-{
-    background: var(--color-light-bg);
-}
-
-.form-container
-{
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-.form-section
-h2 {
-    color: var(--color-primary);
-    margin-bottom: 10px;
-}
-
-.form-section
-p {
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.form-group
-{
-    margin-bottom: 20px;
-}
-
-.form-group
-label {
-    font-weight: bold;
-    color: var(--color-secondary);
-    margin-bottom: 8px;
-    display: block;
-}
-
-.form-group
-input,
-.form-group
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group
-input[type="file"] {
-    padding: 8px 0;
-    border: none;
-    background: none;
-}
-
-.form-section
-button {
-    width: 100%;
-    font-size: 1.1rem;
-    margin-top: 10px; 
-}
-
-/*
-============================
-   FINAL CTA
-============================
-*/
-.final-cta
-{
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--color-dark-bg);
-    color: #fff;
-}
-
-.final-cta
-h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-/*
-============================
-   FOOTER
-============================
-*/
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--color-secondary);
-    color: #fff;
-}
-
-.footer a {
-    color: var(--color-primary);
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-/*
-============================
-   RESPONSIVE
-============================
-*/
-@media
-(max-width: 992px) {
-    .service-card {
-        width: 45%;
-    }
-}
-
-@media
-(max-width: 768px) {
-    .header {
+        background-color: #fff;
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-start;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        border-top: 1px solid #eee;
     }
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 10px 0;
+
+    /* Show the navigation when the 'active' class is applied by JavaScript */
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        margin: 5px 0;
+        padding: 10px 30px;
+        width: 100%;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    /* Show the hamburger icon on small screens */
+    .hamburger {
+        display: block;
+        order: 3; /* Move hamburger button to the right */
+        margin-left: auto; /* Push it to the right */
+    }
+
+    /* Hide the desktop CTA button */
+    .desktop-btn {
+        display: none;
+    }
+
+    /* Hamburger animation: X icon */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
     
     /* Ensure mobile font size is smaller and wraps */
