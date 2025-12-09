@@ -1,35 +1,30 @@
-<!DOCTYPE
-html>
-<html
-lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-    <title>WEconomics
-Recruitment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEconomics Recruitment</title>
 
-    <link rel="preconnect"
-href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-href="https://fonts.gstatic.com" crossorigin>
-    <link
-href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
     <header class="header">
         <div class="logo">
-            <img src="logo.png"
-alt="WEconomics Logo" class="header-logo">
+            <img src="logo.png" alt="WEconomics Logo" class="header-logo">
         </div>
 
-        <nav class="nav">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav" id="mobile-menu">
             <a href="#home">Home</a>
             <a href="#about">Why it Works</a>
             <a href="#services">Specialised Services</a>
@@ -38,333 +33,225 @@ alt="WEconomics Logo" class="header-logo">
             <a href="#contact">Contact</a>
         </nav>
 
-        <a href="#shortlist-form"
-class="btn-primary">Start Your Search</a>
+        <a href="#shortlist-form" class="btn-primary desktop-btn">Start Your Search</a>
     </header>
 
-    <section id="home"
-class="hero">
-        <div
-class="hero-content">
-            <h1>Exceptional Talent,
-Expertly Sourced</h1>
-            <p>No upfront costs, just
-results.</p>
-            <a
-href="#shortlist-form" class="btn-secondary">Start Your
-Search</a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Exceptional Talent, Expertly Sourced</h1>
+            <p>No upfront costs, just results.</p>
+            <a href="#shortlist-form" class="btn-secondary">Start Your Search</a>
         </div>
     </section>
 
-    <section id="about"
-class="value-prop">
+    <section id="about" class="value-prop">
         <h2>Why it Works</h2>
 
-        <div
-class="value-grid">
-            <div
-class="value-item">
-                <h3
-class="visible-content">Risk-Free
-Recruitment</h3>
+        <div class="value-grid">
+            <div class="value-item">
+                <h3 class="visible-content">Risk-Free Recruitment</h3>
                 
-                <div
-class="hidden-content">
-                    <h4>Risk-Free
-Recruitment</h4>
-                    <p>Pay only when you
-hire. No upfront fees, no hidden costs.</p>
+                <div class="hidden-content">
+                    <h4>Risk-Free Recruitment</h4>
+                    <p>Pay only when you hire. No upfront fees, no hidden costs.</p>
                 </div>
             </div>
 
-            <div
-class="value-item">
-                <h3
-class="visible-content">Purpose-Fit
-Hiring</h3>
-                <div
-class="hidden-content">
-                    <h4>Purpose-Fit
-Hiring</h4>
-                    <p>Bringing together our
-talent and your vision to support growth.</p>
+            <div class="value-item">
+                <h3 class="visible-content">Purpose-Fit Hiring</h3>
+                <div class="hidden-content">
+                    <h4>Purpose-Fit Hiring</h4>
+                    <p>Bringing together our talent and your vision to support growth.</p>
                 </div>
             </div>
 
-            <div
-class="value-item">
-                <h3
-class="visible-content">Fast
-Turnaround</h3>
-                <div
-class="hidden-content">
-                    <h4>Fast
-Turnaround</h4>
-                    <p>Make the right hire,
-faster, with candidates screened specifically to your role.</p>
+            <div class="value-item">
+                <h3 class="visible-content">Fast Turnaround</h3>
+                <div class="hidden-content">
+                    <h4>Fast Turnaround</h4>
+                    <p>Make the right hire, faster, with candidates screened specifically to your role.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services"
-class="services-section">
-        <h2>Our Specialised
-Services</h2>
+    <section id="services" class="services-section">
+        <h2>Our Specialised Services</h2>
 
-        <div
-class="services-container">
+        <div class="services-container">
 
-            <div
-class="service-card" id="employers">
-                <h3>For
-Employers</h3>
-                <p>At WEconomics, we
-specialise in delivering exceptional talent that strengthens and elevates your
-business. Whether you’re hiring for junior support staff or senior
-leadership, we provide a carefully compiled shortlist of candidates who are
-screened, qualified, and match your company culture.</p>
-                <p>Our approach saves you
-time, reduces hiring risk, and ensures you only meet candidates who genuinely
-fit your needs. We work across industries and role levels, giving you access to
-a broad and reliable talent network.</p>
-                <p>And importantly, there
-is zero financial risk.</p>
-                <p>You are only billed
-once a placement is successfully made. Until then, our service is completely
-free: no upfront fees, no retainers, no surprises.</p>
-                <a
-href="#shortlist-form" class="btn-secondary">Find Your
-Ideal Candidate</a>
+            <div class="service-card" id="employers">
+                <h3>For Employers</h3>
+                <p>At WEconomics, we specialise in delivering exceptional talent that strengthens and elevates your business. Whether you’re hiring for junior support staff or senior leadership, we provide a carefully compiled shortlist of candidates who are screened, qualified, and match your company culture.</p>
+                <p>Our approach saves you time, reduces hiring risk, and ensures you only meet candidates who genuinely fit your needs. We work across industries and role levels, giving you access to a broad and reliable talent network.</p>
+                <p>And importantly, there is zero financial risk.</p>
+                <p>You are only billed once a placement is successfully made. Until then, our service is completely free: no upfront fees, no retainers, no surprises.</p>
+                <a href="#shortlist-form" class="btn-secondary">Find Your Ideal Candidate</a>
             </div>
 
-            <div
-class="service-card" id="jobseekers">
-                <h3>For Job
-Seekers</h3>
-                <p>Your next opportunity
-matters. At WEconomics we’re committed to helping you find a role where you
-will not only grow but thrive. We take the time to understand your experience,
-strengths, and career goals so we can match you with positions that suit
-you.</p>
-                <p>Whether you're
-starting out, advancing your career, or exploring new industries, we connect
-you to employers who value the right fit just as much as we do.</p>
-                <p>And the best part is
-that our service to candidates is completely free.</p>
-                <p>No fees. No hidden
-costs. Just dedicated support and access to opportunities that match your
-aspirations.</p>
-                <a
-href="#submit-cv-form" class="btn-secondary">Find Your
-Ideal Role</a>
+            <div class="service-card" id="jobseekers">
+                <h3>For Job Seekers</h3>
+                <p>Your next opportunity matters. At WEconomics we’re committed to helping you find a role where you will not only grow but thrive. We take the time to understand your experience, strengths, and career goals so we can match you with positions that suit you.</p>
+                <p>Whether you're starting out, advancing your career, or exploring new industries, we connect you to employers who value the right fit just as much as we do.</p>
+                <p>And the best part is that our service to candidates is completely free.</p>
+                <p>No fees. No hidden costs. Just dedicated support and access to opportunities that match your aspirations.</p>
+                <a href="#submit-cv-form" class="btn-secondary">Find Your Ideal Role</a>
             </div>
 
         </div>
     </section>
 
-    <section
-class="how-it-works">
+    <section class="how-it-works">
         <h2>How It Works</h2>
 
         <div class="steps">
             <div class="step">
-                <h3>Tell us what you’re
-looking for</h3>
-                <p>Share the details we
-need to begin your journey. Whether you’re looking to fill a position or
-mapping out the next step in your career.</p>
+                <h3>Tell us what you’re looking for</h3>
+                <p>Share the details we need to begin your journey. Whether you’re looking to fill a position or mapping out the next step in your career.</p>
             </div>
 
             <div class="step">
-                <h3>We match the right
-people to the right roles</h3>
-                <p>We source, screen, and
-shortlist candidates for required positions. We create matches based on
-skills, personality, and culture fit.</p>
+                <h3>We match the right people to the right roles</h3>
+                <p>We source, screen, and shortlist candidates for required positions. We create matches based on skills, personality, and culture fit.</p>
             </div>
 
             <div class="step">
-                <h3>Move forward with
-confidence</h3>
-                <p>Employers get the
-right talent. Job seekers get the right opportunities.</p>
+                <h3>Move forward with confidence</h3>
+                <p>Employers get the right talent. Job seekers get the right opportunities.</p>
             </div>
         </div>
     </section>
 
-    <section
-class="split-section">
+    <section class="split-section">
         <div class="split">
             <h3>For Employers:</h3>
-            <p>Find the right talent
-without upfront risk.</p>
-            <a
-href="#shortlist-form" class="btn-secondary">Start Your
-Search</a>
+            <p>Find the right talent without upfront risk.</p>
+            <a href="#shortlist-form" class="btn-secondary">Start Your Search</a>
         </div>
 
         <div class="split">
-            <h3>For Job
-Seekers:</h3>
-            <p>Discover roles that fit
-your career goals.</p>
-            <a
-href="#submit-cv-form" class="btn-secondary">Register Now</a>
+            <h3>For Job Seekers:</h3>
+            <p>Discover roles that fit your career goals.</p>
+            <a href="#submit-cv-form" class="btn-secondary">Register Now</a>
         </div>
     </section>
 
-    <section id="shortlist-form"
-class="form-section">
-        <div
-class="form-container">
-            <h2>Start Your Risk-Free
-Search</h2>
+    <section id="shortlist-form" class="form-section">
+        <div class="form-container">
+            <h2>Start Your Risk-Free Search</h2>
             <p>Fill out the form below and we'll be in touch within 24 hours.</p>
 
-            <form action="#"
-method="POST">
-                <div
-class="form-group">
-                    <label
-for="name">Your Name</label>
-                    <input
-type="text" id="name" name="name" required>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="company">Company Name</label>
-                    <input
-type="text" id="company" name="company"
-required>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="email">Work Email</label>
-                    <input
-type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="role">Role You Are Hiring For</label>
-                    <input
-type="text" id="role" name="role"
-placeholder="e.g., Senior Economist, Data Analyst" required>
+                <div class="form-group">
+                    <label for="role">Role You Are Hiring For</label>
+                    <input type="text" id="role" name="role" placeholder="e.g., Senior Economist, Data Analyst" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="details">Additional Requirements/Details</label>
-                    <textarea
-id="details" name="details"
-rows="4"></textarea>
+                <div class="form-group">
+                    <label for="details">Additional Requirements/Details</label>
+                    <textarea id="details" name="details" rows="4"></textarea>
                 </div>
 
-                <button
-type="submit" class="btn-secondary">Start My Search</button>
+                <button type="submit" class="btn-secondary">Start My Search</button>
             </form>
         </div>
     </section>
 
-    <section id="submit-cv-form"
-class="form-section jobseeker-form-section">
-        <div
-class="form-container">
-            <h2>Take the Next Step in
-Your Career</h2>
+    <section id="submit-cv-form" class="form-section jobseeker-form-section">
+        <div class="form-container">
+            <h2>Take the Next Step in Your Career</h2>
             <p>Let our specialists match you with top opportunities in your field.</p>
 
-            <form action="#"
-method="POST" enctype="multipart/form-data">
-                <div
-class="form-group">
-                    <label
-for="js-name">Full Name</label>
-                    <input
-type="text" id="js-name" name="js-name"
-required>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="js-name">Full Name</label>
+                    <input type="text" id="js-name" name="js-name" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="js-email">Email Address</label>
-                    <input
-type="email" id="js-email" name="js-email"
-required>
+                <div class="form-group">
+                    <label for="js-email">Email Address</label>
+                    <input type="email" id="js-email" name="js-email" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="js-role">Target Role/Area</label>
-                    <input
-type="text" id="js-role" name="js-role"
-placeholder="e.g., Quantitative Analyst, Economic Consultant"
-required>
+                <div class="form-group">
+                    <label for="js-role">Target Role/Area</label>
+                    <input type="text" id="js-role" name="js-role" placeholder="e.g., Quantitative Analyst, Economic Consultant" required>
                 </div>
 
-                <div
-class="form-group">
-                    <label
-for="js-message">Message to Recruiter (Optional)</label>
-                    <textarea
-id="js-message" name="js-message"
-rows="4"></textarea>
+                <div class="form-group">
+                    <label for="js-message">Message to Recruiter (Optional)</label>
+                    <textarea id="js-message" name="js-message" rows="4"></textarea>
                 </div>
 
-                <button
-type="submit" class="btn-secondary">Register Now</button>
+                <button type="submit" class="btn-secondary">Register Now</button>
             </form>
         </div>
     </section>
 
-    <section id="contact"
-class="final-cta">
-        <h2>Ready to Hire
-Smarter?</h2>
-        <a href="#shortlist-form"
-class="btn-primary">Contact Us</a>
+    <section id="contact" class="final-cta">
+        <h2>Ready to Hire Smarter?</h2>
+        <a href="#shortlist-form" class="btn-primary">Contact Us</a>
     </section>
 
     <footer class="footer">
-        <div
-class="footer-links">
-            <a
-href="#about">Why it Works</a> | 
-            <a
-href="#services">Services</a> | 
-            <a
-href="#contact">Contact</a>
+        <div class="footer-links">
+            <a href="#about">Why it Works</a> | 
+            <a href="#services">Services</a> | 
+            <a href="#contact">Contact</a>
         </div>
 
-        <div
-class="social-icons">
-            <a
-href="https://www.linkedin.com/company/108644954"
-target="_blank" rel="noopener">LinkedIn</a> | 
-            <a
-href="https://www.facebook.com/profile.php?id=61579164382617"
-target="_blank" rel="noopener">Facebook</a> | 
-            <a
-href="https://www.instagram.com/weconomicsrecruitment/"
-target="_blank" rel="noopener">Instagram</a>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/108644954" target="_blank" rel="noopener">LinkedIn</a> | 
+            <a href="https://www.facebook.com/profile.php?id=61579164382617" target="_blank" rel="noopener">Facebook</a> | 
+            <a href="https://www.instagram.com/weconomicsrecruitment/" target="_blank" rel="noopener">Instagram</a>
         </div>
 
-        <p>© 2025 WEconomics Recruitment
-| 
-            <a
-href="privacy.html">Privacy Policy</a> | 
-            <a
-href="terms.html">Terms</a>
+        <p>© 2025 WEconomics Recruitment | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms</a>
         </p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const navMenu = document.getElementById('mobile-menu');
+            const navLinks = navMenu.querySelectorAll('a');
+
+            // Function to toggle the menu state
+            function toggleMenu() {
+                navMenu.classList.toggle('active');
+                hamburgerBtn.classList.toggle('active');
+            }
+
+            // Toggle menu on button click
+            hamburgerBtn.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked (for smoother navigation)
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
