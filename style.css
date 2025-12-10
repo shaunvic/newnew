@@ -4,12 +4,12 @@
 ============================
 */
 :root {
-    --color-primary: #00a896;    /* Teal */
+    --color-primary: #00a896;     /* Teal */
     --color-secondary: #054a59; /* Charcoal/Navy */
     --color-highlight: #ffb300; /* Gold/Yellow */
     --color-text: #333;
     --color-light-bg: #f5fcfc;  /* Very light teal */
-    --color-dark-bg: #054a59;    /* Secondary/Navy */
+    --color-dark-bg: #054a59;     /* Secondary/Navy */
 }
 
 *,
@@ -69,6 +69,9 @@ section {
 .nav {
     display: flex;
     align-items: center;
+    /* MODIFIED: Added flex-grow and justify-content for centering the links */
+    flex-grow: 1; 
+    justify-content: center;
 }
 
 .nav a {
@@ -202,42 +205,52 @@ h2 {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* AMENDMENT: Styling for the content that is visible by default */
-.value-item .visible-content {
+/*
+AMENDMENT: Styling for the content that is visible by default */
+.value-item
+.visible-content {
     color: var(--color-primary);
     margin: 0;
     font-size: 1.25rem;
 }
 
-/* AMENDMENT: Styling for the content that is hidden by default */
-.value-item .hidden-content {
+/*
+AMENDMENT: Styling for the content that is hidden by default */
+.value-item
+.hidden-content {
     display: none; /* Hide the detailed content initially */
     text-align: center;
     padding: 0 10px; /* Add some horizontal padding for aesthetics */
 }
 
-.value-item .hidden-content h4 {
+.value-item
+.hidden-content h4 {
     color: var(--color-secondary);
     margin-bottom: 5px;
     font-size: 1.25rem;
 }
 
-.value-item .hidden-content p {
+.value-item
+.hidden-content p {
     margin: 0;
     font-size: 1rem;
 }
 
-/* AMENDMENT: Hover states */
-.value-item:hover {
+/*
+AMENDMENT: Hover states */
+.value-item:hover
+{
     background: var(--color-light-bg);
     border-color: var(--color-secondary);
 }
 
-.value-item:hover .visible-content {
+.value-item:hover
+.visible-content {
     display: none; /* Hide the simple heading on hover */
 }
 
-.value-item:hover .hidden-content {
+.value-item:hover
+.hidden-content {
     display: block; /* Show the detailed content on hover */
 }
 /*
@@ -338,7 +351,8 @@ h2 {
 
 /*
 ============================
-    SOCIAL PROOF (Keeping styles for completeness)
+    SOCIAL PROOF (Keeping styles for
+completeness)
 ============================
 */
 .social-proof
@@ -348,7 +362,8 @@ h2 {
 }
 
 .social-proof
-blockquote {
+blockquote
+{
     font-style: italic;
     font-size: 1.3rem;
     max-width: 800px;
@@ -468,7 +483,8 @@ textarea {
 }
 
 .form-group
-input[type="file"] {
+input[type="file"]
+{
     padding: 8px 0;
     border: none;
     background: none;
@@ -524,14 +540,16 @@ h2 {
 ============================
 */
 @media
-(max-width: 992px) {
+(max-width:
+992px) {
     .service-card {
         width: 45%;
     }
 }
 
 @media
-(max-width: 768px) {
+(max-width:
+768px) {
     .header {
         flex-direction: column;
         gap: 10px;
@@ -540,9 +558,13 @@ h2 {
         flex-wrap: wrap;
         justify-content: center;
         margin: 10px 0;
+        /* Reverting flex-grow and justify-content for mobile menu consistency */
+        flex-grow: 0;
+        justify-content: center;
     }
 
-    /* Ensure mobile font size is smaller and wraps */
+    /* Ensure mobile font size is smaller and
+wraps */
     .hero h1 {
         font-size: 2rem;
         white-space: normal;
